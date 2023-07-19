@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
                                     KeyProperties.DIGEST_SHA512)
                             // Only permit the private key to be used if the user
                             // authenticated within the last five minutes.
-                            .setUserAuthenticationRequired(true)
+                            .setUserAuthenticationRequired(true) //Richiede la presenza di una protezione del dispositivo (in caso di assenza di protezione lancia una eccezione)
                             .setUserAuthenticationValidityDurationSeconds(5 * 60)
                             // Request an attestation with challenge "hello world".
                             .setAttestationChallenge("hello world".getBytes("UTF-8"))
