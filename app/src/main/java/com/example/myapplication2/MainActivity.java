@@ -142,9 +142,12 @@ public class MainActivity extends AppCompatActivity {
             }
             */
 
-
-
-        } catch (NoSuchAlgorithmException ex) {
+        }catch (Exception e){
+                textBox.setTextSize(15);
+                textBox.setMovementMethod(new ScrollingMovementMethod());
+                textBox.setText("Error: " + e);
+        }
+        /*catch (NoSuchAlgorithmException ex) {
             throw new RuntimeException(ex);
         } catch (NoSuchProviderException ex) {
             throw new RuntimeException(ex);
@@ -158,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
             throw new RuntimeException(ex);
         } catch (IOException ex) {
             throw new RuntimeException(ex);
-        }
+        }*/
 
 
     }
